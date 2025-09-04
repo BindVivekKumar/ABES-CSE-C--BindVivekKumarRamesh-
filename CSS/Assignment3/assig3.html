@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Cart</title>
+  <style>
+    .aa {
+      display: flex;
+      flex-direction: row; 
+      flex-wrap: nowrap;   
+      gap: 20px;           
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .aaa {
+      width: 200px;
+      border-radius: 15px;
+      overflow: hidden; /* ensures image fits inside */
+      border: 1px solid #ddd;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      background: #fff;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .aaa img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .aaa h3 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .aaa p {
+      font-size: 14px;
+      color: gray;
+      margin: 5px 0;
+    }
+
+    .aaa button {
+      margin: 10px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 8px;
+      background: blue;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .aaa button:hover {
+      background: red;
+    }
+
+    .aaa:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="aa">
+    <div class="aaa">
+      <img src="181039268-dal-makhani-or-dal-makhni-is-a-north-indian-recipe-served-in-bowl-selective-focus.webp" alt="dal makhani img">
+      <h3>Dal Makhani</h3>
+      <p>Delicious North Indian curry</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="aaa">
+      <img src="hamburger-6533719_640.webp" alt="">
+      <h3>Burger</h3>
+      <p>Juicy cheeseburger with fries</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="aaa">
+      <img src="indian-chinese-food-chilli-potato-stock-photo.webp" alt="india chines img">
+      <h3>Chilli Potato</h3>
+      <p>Spicy Indo-Chinese snack</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</body>
+</html>
