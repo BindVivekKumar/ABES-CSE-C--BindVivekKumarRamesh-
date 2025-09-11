@@ -12,15 +12,19 @@
     </style>
    
 </head>
-<body>
+<body id="adi">
 
-    <div id="viv">
+    <button onclick="green()">Green</button>
+
+   <div id="viv">
 
         <button onclick="ad()"></button>
         <p id="aa"></p>
     </div>
-    <script>
 
+
+    <script>
+    
         //function abes()
         //{
         //    document.write("Welcome to zombie world.Its Time to die")
@@ -31,6 +35,12 @@
 
         function ad(){
             document.getElementById("aa").innerHTML="<h1>hello</h1>";
+        }
+
+
+        function green()
+        {
+            document.getElementById("adi").style.backgroundColor="green";
         }
     </script>
     

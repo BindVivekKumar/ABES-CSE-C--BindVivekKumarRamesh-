@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        #logo{
+            margin: 100px;
+            padding-left: 400px;
+            border-radius: 0%;
+        }
+
+
+        #xyz{
+            border-radius: 10%;
+            border-color: black;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div id="xyz">
+        <img id="logo" src="1330140.png" alt="logo" width="100px">
+        <center><h1>Counter App</h1></center>
+
+        <center><h2 id="count">0</h2></center>
+
+        <center>
+
+            <button onclick="incr()"> + </button>
+        <button onclick="decr()"> - </button>
+        </center>
+    </div>
+
+    <br>
+
+
+    <br>
+
+    <br>
+
+
+    <div id="pqr">
+        <img id="viv" src="1330140.png" alt="logo" width="500px">
+
+        <center>
+            <button onclick="hide()"> Hide </button>
+        </center>
+    </div>
+
+
+    <div id="pqr">
+        <img id="viv" src="1330140.png" alt="logo" width="500px">
+
+        <center>
+            <button onclick="hide()"> Hide </button>
+        </center>
+    </div>
+
+    <script>
+        let counter = 0;
+
+        function incr() {
+            if (counter < 10) {
+                counter++;
+                document.getElementById("count").innerText = counter;
+            }
+
+            else
+            alert("not more then 10");
+        }
+
+        function decr() {
+            if (counter > 0) {
+                counter--;
+                document.getElementById("count").innerText = counter;
+            }
+
+            else
+            alert("not less then 10");
+        }
+
+        function hide() {
+    
+            document.getElementById("viv").style.display = "none";
+        }
+    </script>
+
+    </script>
+    
+</body>
+</html>
