@@ -7,12 +7,48 @@
     
 <script>
 
-var a=5;
+var a=3;
+var Table;
+for(i=1;i<=10;i++)
+{
+Table=i*a;
+document.write(a ,"*", i,"=",Table );
+document.write("<br>");
 
-do{
-    document.write("java is best <br>");
-    a++;
-}while(a<=10)
+
+
+
+}
+
+document.write("Even No:");
+for(i=1;i<=10;i++)
+{
+if(i*a%2==0)
+{
+    document.write(i*a," ");
+    
+    
+}
+
+
+}
+document.write("<br>");
+
+document.write("Odd No:");
+for(i=1;i<=10;i++)
+{
+if(i*a%2!=0)
+{
+    document.write(i*a," ");
+    
+    
+}
+
+
+}
+
+
+
 
 
 </script>
