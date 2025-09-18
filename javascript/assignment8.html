@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart Example</title>
+  <style>
+    body {
+      font-family: Arial;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .cart {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+    }
+    .item {
+      margin: 5px 0;
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+    .total {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: right;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      background: green;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="cart" id="cart1">
+    <h3>Cart 1</h3>
+    <div class="items"></div>
+    <div class="total"></div>
+    <button onclick="loadCart('cart1')">Load Cart 1</button>
+  </div>
+
+  <div class="cart" id="cart2">
+    <h3>Cart 2</h3>
+    <div class="items"></div>
+    <div class="total"></div>
+    <button onclick="loadCart('cart2')">Load Cart 2</button>
+  </div>
+
+  <div class="cart" id="cart3">
+    <h3>Cart 3</h3>
+    <div class="items"></div>
+    <div class="total"></div>
+    <button onclick="loadCart('cart3')">Load Cart 3</button>
+  </div>
+
+  <script>
+    const cartsData = {
+      cart1: [
+        { name: "Samsung Galaxy Ultra 25",
+         price: 500,
+          model: "nsjhsjj677"
+         },
+
+
+        { name: "iPhone 15 Pro", 
+        price: 1200,
+         model: "abc12345"
+         }],
+
+
+
+      cart2: [
+        { name: "Sony TV", 
+        price: 1500,
+        model: "tvx9988" 
+        },
+        { name: "LG TV",
+         price: 1300,
+         model: "lg5522"
+        }],
+
+
+
+      cart3: [
+        { name: "Valorant Game",
+        price: 5000,
+        version: "v7.0" },
+        { name: "GTA VI",
+        price: 7000,
+        version: "beta"
+    } ]
+    };
+
+    function loadCart(cartId) {
+      const cart = document.getElementById(cartId);
+      const itemsContainer = cart.querySelector(".items");
+      const totalContainer = cart.querySelector(".total");
+
+      itemsContainer.innerHTML = "";
+      totalContainer.innerHTML = "";
+     let total = 0;
+
+      cartsData[cartId].forEach(item => {
+        const div = document.createElement("div");
+        div.classList.add("item");
+        div.innerHTML = `
+          <strong>${item.name || item.Game}</strong><br>
+          Price: Rs ${item.price}<br>
+          ${item.model ? "Model: " + item.model : ""}
+          ${item.version ? "Version: " + item.version : ""}
+        `;
+        itemsContainer.appendChild(div);
+
+        total += item.price;
+      });
+
+      totalContainer.innerHTML = "Total: rs" + total;
+    }
+  </script>
+</body>
+</html>
