@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+    <style>
+        cart1, cart2 {
+            display: block; 
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+        #it {
+            background-color: aqua;
+            color: blue;
+            font-size: larger;
+        }
+        #cse {
+            background-color: lightgreen;
+            color: darkgreen;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+
+    <cart1 id="it">
+        <h2>IT Students</h2>
+    </cart1>
+
+    <cart2 id="cse">
+        <h2>CSE Students</h2>
+    </cart2>
+
+    <script>
+        const students = [
+            { Name: "Satya",
+             Roll: 50, 
+             Class: "IT" },
+
+            { Name: "Rahul",
+             Roll: 60,
+            Class: "CSE" },
+
+
+            { Name: "Vivek",
+            Roll: 70,
+            Class: "IT" }
+        ];
+
+        for (let i = 0; i < students.length; i++) {
+            let student = students[i];
+            let targetId = student.Class.toLowerCase();
+
+            document.getElementById(targetId).innerHTML += `
+                <p>Name: ${student.Name}</p>
+                <p>Roll: ${student.Roll}</p>
+                <hr>
+            `;
+        }
+       
+    </script>
+</body>
+</html>
