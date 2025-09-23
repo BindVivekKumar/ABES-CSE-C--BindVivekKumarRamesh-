@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    
+    <h1>Your name : </h1> <input type="text" id="viv">
+   
+    <button onclick=" abes()">Submit Your Name</button>
+
+    
+
+
+   <h1> Yourse Course : </h1> <input type="text" id="viv1">
+     
+    <button onclick=" abes1()">Submit your Course Detail</button>
+
+    
+
+
+
+   <h1>Know Language : </h1> <input type="text" id="viv2"> <br> 
+    <br>
+                            <input type="text" id="viv21">   <br>
+                            <br>
+                            <input type="text" id="viv22"> 
+                            
+     
+    <button onclick=" abes2()">Submit Your Language</button>
+
+    <br>
+    <br>
+    <p id="aaa"></p>   
+    <p id="aaa1"></p> 
+    <p id="aaa2"></p>
+     <p id="aaa21"></p>
+      <p id="aaa22"></p>
+
+    <script>
+
+        function abes()
+        {
+           let inputfilled= document.getElementById("viv");
+           let value=inputfilled.value;
+           document.getElementById("aaa").innerHTML=value;
+        }
+
+        function abes1()
+        {
+           let inputfilled= document.getElementById("viv1");
+           let value=inputfilled.value;
+           document.getElementById("aaa1").innerHTML=value;
+        }
+
+        function abes2()
+        {
+           let inputfilled= document.getElementById("viv2");
+           let value=inputfilled.value;
+            let inputfilled1= document.getElementById("viv21");
+           let value1=inputfilled1.value;
+            let inputfilled2= document.getElementById("viv22");
+           let value2=inputfilled.value;
+           document.getElementById("aaa2").innerHTML=value;
+           document.getElementById("aaa21").innerHTML=value;
+           document.getElementById("aaa22").innerHTML=value;
+        }
+    </script>
+</body>
+</html>
