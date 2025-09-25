@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       .cart {
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+            border-radius: 5%;
+            margin: 20px auto;
+        }
+
+        .output-cart {
+            border: 2px solid blue;
+            padding: 20px;
+            width: 300px;
+            border-radius: 5%;
+            margin: 10px auto;
+        }
+
+        input {
+            width: 180px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cart"> 
+        <h1>To Do List</h1>
+
+        <input type="text" id="viv2" placeholder="Play">
+        <button onclick="addTask('viv2')"> + </button>
+        <br><br>
+
+        <input type="text" id="viv3" placeholder="Go To The Market">
+        <button onclick="addTask('viv3')"> + </button>
+        <br><br>
+
+        <input type="text" id="viv4" placeholder="Study">
+        <button onclick="addTask('viv4')"> + </button>
+        <br><br>
+
+        <button onclick="clearAll()">List Of All</button>
+    </div>
+
+    <div id="outputContainer">
+        <!-- New tasks will appear here -->
+    </div>
+
+    <script>
+        function addTask(inputId) {
+            let input = document.getElementById(inputId);
+            let value = input.value.trim();
+
+            if(value === "") {
+                
+                return;
+            }
+
+            let newCart = document.createElement("div");
+            newCart.className = "output-cart";
+            newCart.innerText = value;
+
+            document.getElementById("outputContainer").appendChild(newCart);
+
+            input.value = "";
+        }
+
+        
+        function clearAll() {
+            document.getElementById("outputContainer").innerHTML = "";
+        }
+    </script>
+
+</body>
+</html>
