@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABES Institute – Practice Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="#">ABES</a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#departments">Departments</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Banner Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <h1>Welcome to ABES Institute</h1>
+      <p>Excellence in Education & Innovation</p>
+      <a href="#admissions" class="btn">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About ABES</h2>
+      <p>
+        ABES Institute is committed to providing quality education and
+        holistic development of its students. Our campus nurtures innovation,
+        research, and excellence.
+      </p>
+    </div>
+  </section>
+
+  Departments / Programs Section
+  <section id="departments" class="departments-section">
+    <div class="container">
+      <h2>Departments</h2>
+      <div class="dept-grid">
+        <div class="dept-card">
+          <h3>Computer Science & Engineering</h3>
+          <p>Focus on software, AI, data science, etc.</p>
+        </div>
+        <div class="dept-card">
+          <h3>Electronics & Communication</h3>
+          <p>Design, communication, signal processing.</p>
+        </div>
+        <div class="dept-card">
+          <h3>Mechanical Engineering</h3>
+          <p>Thermodynamics, manufacturing, design.</p>
+        </div>
+        <div class="dept-card">
+          <h3>Civil Engineering</h3>
+          <p>Structural design, hydraulics, construction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  Admissions Section
+  <section id="admissions" class="admissions-section">
+    <div class="container">
+      <h2>Admissions</h2>
+      <p>Apply online by filling in the form below:</p>
+      <form id="admission-form">
+        <div class="form-group">
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" name="fname" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="dept">Department</label>
+          <select id="dept" name="dept">
+            <option value="">Select Department</option>
+            <option value="cse">Computer Science</option>
+            <option value="ece">Electronics</option>
+            <option value="me">Mechanical</option>
+            <option value="cv">Civil</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section / Footer -->
+  <footer id="contact" class="footer-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>
+        ABES Institute, Ghaziabad, Uttar Pradesh <br />
+        Email: info@abes.ac.in <br />
+        Phone: +91-XXXXXXXXXX
+      </p>
+      <p class="copyright">
+        &copy; 2025 ABES EC. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
