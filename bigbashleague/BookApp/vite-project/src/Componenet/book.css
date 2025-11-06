@@ -1,0 +1,18 @@
+#book {
+    border: 5px solid red;
+    height: 350px;
+    width: 300px;
+    background-color: burlywood;
+}
+
+button {
+    height: 30px;
+    width: 30px;
+    background-color: orange;
+    color: white;
+    font-size: 30px;
+}
+
+span {
+    font-size: 30px;
+}
